@@ -28,9 +28,20 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonInclude(Include.NON_NULL)
 public class StartLaunchRQ extends StartRQ {
+
+	@JsonProperty("id")
+	private Long id;
 	
 	@JsonProperty("mode")
 	private Mode mode;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
 
 	public Mode getMode() {
 		return mode;

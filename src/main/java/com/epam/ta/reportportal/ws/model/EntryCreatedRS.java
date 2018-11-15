@@ -37,8 +37,14 @@ public class EntryCreatedRS {
 	@JsonProperty("id")
 	private Long id;
 
-	public EntryCreatedRS() {
+	@JsonProperty("uuid")
+	private String uuid;
 
+	public EntryCreatedRS() {
+	}
+
+	public EntryCreatedRS(String uuid) {
+		this.uuid = uuid;
 	}
 
 	public EntryCreatedRS(Long id) {
@@ -53,10 +59,19 @@ public class EntryCreatedRS {
 		this.id = id;
 	}
 
+	public String getUuid() {
+		return uuid;
+	}
+
+	public void setUuid(String uuid) {
+		this.uuid = uuid;
+	}
+
 	@Override
 	public String toString() {
 		final StringBuilder sb = new StringBuilder("EntryCreatedRS{");
 		sb.append("id='").append(id).append('\'');
+		sb.append("uuid='").append(uuid).append('\'');
 		sb.append('}');
 		return sb.toString();
 	}
