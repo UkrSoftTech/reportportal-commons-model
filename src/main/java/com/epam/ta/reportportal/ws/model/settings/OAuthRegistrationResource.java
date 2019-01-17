@@ -35,10 +35,6 @@ public class OAuthRegistrationResource implements Serializable {
 
 	@NotEmpty
 	@NotNull
-	private String id;
-
-	@NotEmpty
-	@NotNull
 	private String clientId;
 
 	@NotEmpty
@@ -68,14 +64,6 @@ public class OAuthRegistrationResource implements Serializable {
 	private Set<String> scopes;
 
 	private Map<String, String> restrictions;
-
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
-	}
 
 	public String getClientId() {
 		return clientId;
@@ -192,13 +180,10 @@ public class OAuthRegistrationResource implements Serializable {
 
 		OAuthRegistrationResource that = (OAuthRegistrationResource) o;
 
-		if (id != null ? !id.equals(that.id) : that.id != null) {
+		if (!clientId.equals(that.clientId)) {
 			return false;
 		}
-		if (clientId != null ? !clientId.equals(that.clientId) : that.clientId != null) {
-			return false;
-		}
-		if (clientSecret != null ? !clientSecret.equals(that.clientSecret) : that.clientSecret != null) {
+		if (!clientSecret.equals(that.clientSecret)) {
 			return false;
 		}
 		if (clientAuthMethod != null ? !clientAuthMethod.equals(that.clientAuthMethod) : that.clientAuthMethod != null) {
@@ -238,9 +223,8 @@ public class OAuthRegistrationResource implements Serializable {
 
 	@Override
 	public int hashCode() {
-		int result = id != null ? id.hashCode() : 0;
-		result = 31 * result + (clientId != null ? clientId.hashCode() : 0);
-		result = 31 * result + (clientSecret != null ? clientSecret.hashCode() : 0);
+		int result = clientId.hashCode();
+		result = 31 * result + clientSecret.hashCode();
 		result = 31 * result + (clientAuthMethod != null ? clientAuthMethod.hashCode() : 0);
 		result = 31 * result + (authGrantType != null ? authGrantType.hashCode() : 0);
 		result = 31 * result + (redirectUrlTemplate != null ? redirectUrlTemplate.hashCode() : 0);
