@@ -17,11 +17,9 @@
 
 package com.epam.ta.reportportal.ws.model.user;
 
-import com.epam.ta.reportportal.ws.model.ModelViews;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonView;
 
 import javax.validation.constraints.NotNull;
 import java.util.Map;
@@ -58,10 +56,6 @@ public class UserResource {
 
 	@JsonProperty(value = "metadata")
 	private Object metadata;
-
-	@JsonProperty(value = "defaultProject", required = true)
-	@JsonView(ModelViews.FullUserView.class)
-	private String defaultProject;
 
 	@JsonProperty(value = "assignedProjects")
 	private Map<String, AssignedProject> assignedProjects;
@@ -112,14 +106,6 @@ public class UserResource {
 
 	public void setUserRole(String value) {
 		this.userRole = value;
-	}
-
-	public void setDefaultProject(String value) {
-		this.defaultProject = value;
-	}
-
-	public String getDefaultProject() {
-		return defaultProject;
 	}
 
 	public Object getMetadata() {
@@ -185,7 +171,6 @@ public class UserResource {
 		sb.append(", fullName='").append(fullName).append('\'');
 		sb.append(", accountType='").append(accountType).append('\'');
 		sb.append(", userRole='").append(userRole).append('\'');
-		sb.append(", defaultProject='").append(defaultProject).append('\'');
 		sb.append(", assignedProjects=").append(assignedProjects);
 		sb.append('}');
 		return sb.toString();
