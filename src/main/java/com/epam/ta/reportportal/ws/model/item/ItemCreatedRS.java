@@ -35,7 +35,7 @@ public class ItemCreatedRS extends EntryCreatedRS {
 
     }
 
-    public ItemCreatedRS(Long id, String uniqueId) {
+    public ItemCreatedRS(String id, String uniqueId) {
         super(id);
         this.uniqueId = uniqueId;
     }

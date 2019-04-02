@@ -44,7 +44,7 @@ public class BatchElementCreatedRS extends EntryCreatedRS {
 		
 	}
 	
-	public BatchElementCreatedRS(Long id) {
+	public BatchElementCreatedRS(String id) {
 		super.setId(id);
 	}
 	

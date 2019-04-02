@@ -39,7 +39,7 @@ public class FinishLaunchRS extends EntryCreatedRS {
 	public FinishLaunchRS() {
 	}
 
-	public FinishLaunchRS(Long id, Long number, String link) {
+	public FinishLaunchRS(String id, Long number, String link) {
 		super(id);
 		this.number = number;
 		this.link = link;
