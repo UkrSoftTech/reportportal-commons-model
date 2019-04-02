@@ -19,4 +19,12 @@ public class EntryCreatedAsyncRS extends EntryCreatedRS {
     public EntryCreatedAsyncRS(Long id) {
         super.setId(id);
     }
+
+    public UUID getClientRef() {
+        return clientRef;
+    }
+
+    public void setClientRef(UUID clientRef) {
+        this.clientRef = clientRef;
+    }
 }
