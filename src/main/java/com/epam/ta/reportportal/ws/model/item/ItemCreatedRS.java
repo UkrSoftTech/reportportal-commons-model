@@ -20,7 +20,7 @@
  */
 package com.epam.ta.reportportal.ws.model.item;
 
-import com.epam.ta.reportportal.ws.model.EntryCreatedRS;
+import com.epam.ta.reportportal.ws.model.EntryCreatedAsyncRS;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 /**
@@ -29,13 +29,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
  * @author Andrei Varabyeu
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class ItemCreatedRS extends EntryCreatedRS {
+public class ItemCreatedRS extends EntryCreatedAsyncRS {
 
     public ItemCreatedRS() {
 
     }
 
-    public ItemCreatedRS(String id, String uniqueId) {
+    public ItemCreatedRS(Long id, String uniqueId) {
         super(id);
         this.uniqueId = uniqueId;
     }

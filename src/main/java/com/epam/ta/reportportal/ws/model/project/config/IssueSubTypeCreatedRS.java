@@ -16,7 +16,7 @@ public class IssueSubTypeCreatedRS extends EntryCreatedRS {
 	public IssueSubTypeCreatedRS() {
 	}
 
-	public IssueSubTypeCreatedRS(String id, String locator) {
+	public IssueSubTypeCreatedRS(Long id, String locator) {
 		super(id);
 		this.locator = locator;
 	}
