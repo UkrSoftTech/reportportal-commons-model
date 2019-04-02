@@ -10,7 +10,7 @@ import java.util.UUID;
 public class EntryCreatedAsyncRS extends EntryCreatedRS {
 
     @JsonProperty("clientRef")
-    private UUID clientRef;
+    private String clientRef;
 
     public EntryCreatedAsyncRS() {
 
@@ -20,11 +20,11 @@ public class EntryCreatedAsyncRS extends EntryCreatedRS {
         super.setId(id);
     }
 
-    public UUID getClientRef() {
+    public String getClientRef() {
         return clientRef;
     }
 
-    public void setClientRef(UUID clientRef) {
+    public void setClientRef(String clientRef) {
         this.clientRef = clientRef;
     }
 }
