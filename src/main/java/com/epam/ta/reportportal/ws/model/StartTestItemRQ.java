@@ -50,7 +50,7 @@ public class StartTestItemRQ extends StartRQ {
 	@NotNull
 	@JsonProperty(value = "launchId", required = true)
 	@ApiModelProperty(required = true)
-	private Long launchId;
+	private String launchId;
 
 	@NotNull
 	@JsonProperty(value = "type", required = true)
